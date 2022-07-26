@@ -1,3 +1,7 @@
+# Basic Usage Log Destination
+Basic usage example can be found in the `main.tf` source file.
+
+Example shows using Default Tags in the provider as well as passing additional tags into the resource.
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements
 
@@ -11,7 +15,7 @@ No providers.
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_log-destination"></a> [log-destination](#module\_log-destination) | so1omon563/cloudwatch-logs/aws | 1.0.0 |
+| <a name="module_log-destination"></a> [log-destination](#module\_log-destination) | so1omon563/cloudwatch-logs/aws//modules/log-destination | 1.0.0 |
 
 ## Resources
 

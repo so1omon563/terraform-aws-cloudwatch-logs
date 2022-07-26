@@ -15,7 +15,7 @@ No providers.
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_cw_logs"></a> [cw\_logs](#module\_cw\_logs) | ../../ | n/a |
+| <a name="module_cw_logs"></a> [cw\_logs](#module\_cw\_logs) | so1omon563/cloudwatch-logs/aws | 1.0.0 |
 
 ## Resources
 
