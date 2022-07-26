@@ -8,9 +8,9 @@ provider "aws" {
 }
 
 module "cw_logs" {
-  # source  = "so1omon563/cloudwatch-logs/aws"
-  # version = "1.0.0" # Replace with appropriate version
-  source = "../../"
+  source  = "so1omon563/cloudwatch-logs/aws"
+  version = "1.0.0" # Replace with appropriate version
+  # source = "../../"
 
   name = "example-group"
   tags = {
