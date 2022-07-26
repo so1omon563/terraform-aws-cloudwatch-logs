@@ -1,6 +1,5 @@
 locals {
-  tags = var.tags
+  tags       = var.tags
 
-  name       = var.topic_name_override != null ? var.topic_name_override : var.topic_prefix == null ? format("%s", var.name) : format("%s-%s", var.name, var.topic_prefix)
-  topic_name = var.fifo_topic ? format("%s.fifo", local.name) : local.name
+  group_name = var.group_name_override != null ? var.group_name_override : var.group_prefix == null ? format("%s", var.name) : var.group_separator == "/" ? format("%s%s%s%s", var.group_separator, var.name, var.group_separator, var.group_prefix) : format("%s%s%s", var.name, var.group_separator, var.group_prefix)
 }

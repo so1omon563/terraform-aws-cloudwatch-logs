@@ -1,45 +1,48 @@
 variable "name" {}
-
 variable "tags" {}
 
-variable "topic_prefix" {}
+module "kms-key" {
+  source  = "so1omon563/kms/aws"
+  version = "1.1.2"
 
-variable "topic_name_override" {}
-
-provider "aws" {
-  default_tags {
-    tags = var.tags
-  }
+  name = "kitchen-test-key"
+  tags = var.tags
 }
+output "kms-key" { value = module.kms-key }
 
-module "sns" {
-  source = "../../../"
-
-  name = var.name
-  tags = {
-    example = "true"
-  }
-}
-output "sns" { value = module.sns }
-
-module "sns-prefix" {
+module "log-group" {
   source = "../../../"
 
   name         = var.name
-  topic_prefix = var.topic_prefix
-  tags = {
-    example = "true"
-  }
+  tags         = var.tags
+  group_prefix = "lg-default"
 }
-output "sns-prefix" { value = module.sns-prefix }
+output "log-group" { value = module.log-group }
 
-module "sns-override" {
+module "log-group-custom-name" {
   source = "../../../"
 
   name                = var.name
-  topic_name_override = var.topic_name_override
-  tags = {
-    example = "true"
-  }
+  tags                = var.tags
+  group_name_override = "this-is-my-name-override"
 }
-output "sns-override" { value = module.sns-override }
+output "log-group-custom-name" { value = module.log-group-custom-name }
+
+module "log-group-custom-separator" {
+  source = "../../../"
+
+  name            = var.name
+  tags            = var.tags
+  group_prefix    = "lg-default"
+  group_separator = "-"
+}
+output "log-group-custom-separator" { value = module.log-group-custom-separator }
+
+module "log-group-kms" {
+  source = "../../../"
+
+  name       = "kitchen-kms"
+  tags       = var.tags
+  kms_key_id = module.kms-key.kms.kms_key.kms.arn
+}
+output "log-group-kms" { value = module.log-group-kms }
