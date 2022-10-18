@@ -4,13 +4,18 @@ Provides a CloudWatch Log Stream resource.
 
 See the [Terraform documentation](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_log_stream) for more information on the limitations / requirements for using this resource.
 
-Examples for use can be found under the [examples](examples) directory.
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+
 # TF-DOCS.md
 
 Auto-generated technical documentation is created using [`terraform-docs`](https://terraform-docs.io/)
 
 Specific use-case documentation and examples should be found in [`README.md`](README.md)
+## Examples
+
+```hcl
+# See examples under the top level examples directory for more information on how to use this module.
+```
 
 ## Requirements
 
@@ -23,7 +28,7 @@ Specific use-case documentation and examples should be found in [`README.md`](RE
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | 4.23.0 |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | 4.35.0 |
 
 ## Modules
 
@@ -49,4 +54,6 @@ No modules.
 | Name | Description |
 |------|-------------|
 | <a name="output_log_stream"></a> [log\_stream](#output\_log\_stream) | A map of properties for the created CloudWatch Log Stream. |
+
+
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->

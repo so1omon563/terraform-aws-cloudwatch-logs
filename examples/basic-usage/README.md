@@ -1,8 +1,35 @@
 # Basic Usage
-Basic usage example can be found in the `main.tf` source file.
+
+Basic usage example.
 
 Example shows using Default Tags in the provider as well as passing additional tags into the resource.
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+
+
+## Examples
+
+```hcl
+provider "aws" {
+  default_tags {
+    tags = {
+      environment = "dev"
+      terraform   = "true"
+    }
+  }
+}
+
+module "cw_logs" {
+  source  = "so1omon563/cloudwatch-logs/aws"
+  version = "1.0.0" # Replace with appropriate version
+
+  name = "example-group"
+  tags = {
+    example = "true"
+  }
+  group_prefix = "my-product-name"
+}
+```
+
 ## Requirements
 
 No requirements.
@@ -28,4 +55,6 @@ No inputs.
 ## Outputs
 
 No outputs.
+
+
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->

@@ -4,25 +4,18 @@ Provides a CloudWatch Logs destination resource.
 
 See the [Terraform documentation](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_log_destination) for more information on the limitations / requirements for using this resource.
 
-## Quick Start
-
-```hcl-terraform
-module "log-destination" {
-  source = "git::ssh://git@gilligan.pearsondev.com/tf-modules/cloudwatch-logs.git//modules/log-destination?ref=<RELEASE_VERSION>"
-
-  name = "example-application"
-  role_arn = <arn_for_role>
-  target_arn = <arn_for_target>
-}
-```
-
-More configuration examples can be found in the [examples](../examples) directory
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+
 # TF-DOCS.md
 
 Auto-generated technical documentation is created using [`terraform-docs`](https://terraform-docs.io/)
 
 Specific use-case documentation and examples should be found in [`README.md`](README.md)
+## Examples
+
+```hcl
+# See examples under the top level examples directory for more information on how to use this module.
+```
 
 ## Requirements
 
@@ -35,7 +28,7 @@ Specific use-case documentation and examples should be found in [`README.md`](RE
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | 4.23.0 |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | 4.35.0 |
 
 ## Modules
 
@@ -62,4 +55,6 @@ No modules.
 | Name | Description |
 |------|-------------|
 | <a name="output_log_destination"></a> [log\_destination](#output\_log\_destination) | A map of properties for the created CloudWatch Log Destination. |
+
+
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->

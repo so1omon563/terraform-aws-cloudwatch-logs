@@ -2,11 +2,16 @@
 
 Creates a CloudWatch Log Group. Supports all standard options for the CloudWatch Log Group resource.
 
-Also includes submodules for additional CloudWatch Log related resources - log streams and destinations. These are found under the [modules](https://github.com/so1omon563/terraform-aws-cloudwatch-logs/tree/main/modules) directory.
+Also includes submodules for additional CloudWatch Log related resources - log streams and destinations.
 
-Examples for use can be found under the [examples](https://github.com/so1omon563/terraform-aws-cloudwatch-logs/tree/main/examples) directory.
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+
 Auto-generated technical documentation is created using [`terraform-docs`](https://terraform-docs.io/)
+## Examples
+
+```hcl
+# See examples under the top level examples directory for more information on how to use this module.
+```
 
 ## Requirements
 
@@ -19,7 +24,7 @@ Auto-generated technical documentation is created using [`terraform-docs`](https
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | 4.23.0 |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | 4.35.0 |
 
 ## Modules
 
@@ -48,4 +53,6 @@ No modules.
 | Name | Description |
 |------|-------------|
 | <a name="output_log_group"></a> [log\_group](#output\_log\_group) | A map of properties for the created CloudWatch Log Group. |
+
+
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
